@@ -1,4 +1,6 @@
 import math
 
 sade = float(input("Anna ympyrän säde: "))
-print("Ympyrän pinta-ala on:", math.pi * (sade ** 2))
+
+a = f"{math.pi * (sade ** 2):.2f}"
+print(f"Ympyrän pinta-ala on: {a}")
