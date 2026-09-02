@@ -2,9 +2,8 @@ nimi = input("Mikä on nimesi?: ")
 ika = int(input("Kuinka vanha olet?: "))
 
 
-while ika < 12:
+if ika < 12:
     print(f"Olet liian nuori, peli sulkeutuu.")
-    break
 
 else:
     print(f"Terve {nimi}! Olet {ika} vuotias.\n")
@@ -18,7 +17,6 @@ else:
         elif valikko == "D":
             print("Käännyit oikealle ja löysit avaimen!\n")
             valikko = (input("----VALIKKO----\nMitä haluat tehdä?\n(A) kääntyä vasemmalle\n(D) kääntyä oikealle.\n"))
-    else:
-        print("Lopetetaan peli.")
-
+    
+    print("Lopetetaan peli.")
         
