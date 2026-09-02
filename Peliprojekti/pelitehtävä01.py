@@ -9,15 +9,16 @@ while ika < 12:
 else:
     print(f"Terve {nimi}! Olet {ika} vuotias.\n")
 
-    valikko = (input("Mitä haluat tehdä? (A) kääntyä vasemmalle tai (D) kääntyä oikealle. "))
+    valikko = (input("----VALIKKO----\nMitä haluat tehdä?\n(A) kääntyä vasemmalle\n(D) kääntyä oikealle.\n"))
     while valikko != "Lopeta":
-        if valikko == A:
-            print("Jee! Aloitetaan peli.\n")
-            print(f"Päävalikko:\n""A - Aloita peli!\n""B - Asetukset.\n")
-            
-        elif valikko == 2:
-            print("Avataan asetukset.\n")
-            print(f"Päävalikko:\n""A - Aloita peli!\n""B - Asetukset.\n")
+        if valikko == "A":
+            print("Käännyit vasemmalle ja löysit miekan!\n")
+            valikko = (input("----VALIKKO----\nMitä haluat tehdä?\n(A) kääntyä vasemmalle\n(D) kääntyä oikealle.\n"))
+
+        elif valikko == "D":
+            print("Käännyit oikealle ja löysit avaimen!\n")
+            valikko = (input("----VALIKKO----\nMitä haluat tehdä?\n(A) kääntyä vasemmalle\n(D) kääntyä oikealle.\n"))
     else:
-        print("Lopetetaan.")
+        print("Lopetetaan peli.")
+
         
