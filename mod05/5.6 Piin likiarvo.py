@@ -1,4 +1,3 @@
-import math
 import random
 
 #π≈4n/N
