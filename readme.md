@@ -24,3 +24,5 @@ Moduulin 4 tehtävät tehty. pvm. 25.08
 Moduulin 5 tehtävät tehty. pvm. 2.09
 
 ## moduuli 6
+
+Moduuulin 6 tehtävät tehty pvm. 2.09
