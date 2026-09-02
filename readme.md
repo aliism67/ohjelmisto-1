@@ -21,4 +21,6 @@ Moduulin 4 tehtävät tehty. pvm. 25.08
 
 ## moduuli 5
 
-edit test
+Moduulin 5 tehtävät tehty. pvm. 2.09
+
+## moduuli 6
