@@ -15,3 +15,4 @@ max_luku = int(input("Mikä on noppien maksimisilmäluku: "))
 while luku < max_luku:
         luku = nopanheitto(max_luku)
         print(luku)
+    
