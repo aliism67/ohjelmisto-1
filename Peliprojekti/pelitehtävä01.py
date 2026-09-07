@@ -1,10 +1,11 @@
-'''def inventory(tavarat):
+def inventory(tavarat):
 
 def health(elamapisteet):
 
 
 max_elamapisteet = 10
-tavarat = []'''
+elamapisteet = 0
+tavarat = []
 
 nimi = input("Mikä on nimesi?: ")
 ika = int(input("Kuinka vanha olet?: "))

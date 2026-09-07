@@ -30,3 +30,5 @@ Moduuulin 6 tehtävät tehty pvm. 2.09
 ## moduuli 7
 
 moduulin 7 tehtävät 1 ja 2 tehty pvm. 2.09
+
+Loput tehtävät tehty pvm. 3.09
