@@ -14,17 +14,22 @@ class Car:
         elif self.Nopeus < 0:
             self.Nopeus = 0
             print("Auto jarruttaa")
+
+    def kulje(self, tunnit):
+        self.Matka += self.Nopeus * tunnit
         
 
 auto = Car("ABC-123", 142)
 
 print(f"Uuden auton rekisterinumero on {auto.Rekisterinumero}, huippunopeus {auto.Huippunopeus} km/h, nopeus {auto.Nopeus} ja kuljettu matka {auto.Matka}")
 
-
 auto.kiihdyta(30)
 auto.kiihdyta(70)
 auto.kiihdyta(50)
+
+auto.kulje(1.5)
+print(f"Kuljettu matka: {auto.Matka}")
+
 print(f"Auton nopeus kiihdytyksen jälkeen jälkeen: {auto.Nopeus}")
 auto.kiihdyta(-200)
 print(f"Auton nopeus jarrutuksen jälkeen: {auto.Nopeus}")
-
