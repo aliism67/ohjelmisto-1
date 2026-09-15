@@ -26,10 +26,10 @@ print(f"Uuden auton rekisterinumero on {auto.Rekisterinumero}, huippunopeus {aut
 auto.kiihdyta(30)
 auto.kiihdyta(70)
 auto.kiihdyta(50)
+print(f"Auton nopeus kiihdytyksen jälkeen jälkeen: {auto.Nopeus}")
 
 auto.kulje(1.5)
 print(f"Kuljettu matka: {auto.Matka}")
 
-print(f"Auton nopeus kiihdytyksen jälkeen jälkeen: {auto.Nopeus}")
 auto.kiihdyta(-200)
 print(f"Auton nopeus jarrutuksen jälkeen: {auto.Nopeus}")
