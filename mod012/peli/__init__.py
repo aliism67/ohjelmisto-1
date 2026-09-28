@@ -1,0 +1,1 @@
+from .pelaaja import Pelaaja
