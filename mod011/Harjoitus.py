@@ -18,7 +18,7 @@ class Elain:
 uusi_elain = Elain("Joku eläin", 1500, 20250921)
 
 class Peto():
-    def __init_(self, on_metsastaja):
+    def __init__(self, on_metsastaja):
         self.on_metsastaja = on_metsastaja
 
 #Aliluokat
