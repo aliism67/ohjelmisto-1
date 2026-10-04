@@ -1,1 +1,1 @@
-{"nimi": "gg", "tavarat": ["Omena", "Roska"], "sijainti": "Joki", "energiapisteet": 8, "karmapisteet": 2}
+{"nimi": "hh", "tavarat": [], "sijainti": "Vanha puu", "energiapisteet": 9, "karmapisteet": 0}

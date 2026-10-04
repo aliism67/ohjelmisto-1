@@ -10,11 +10,16 @@ class Huone:
         print(f"matkustaminen vie sinulta yhden energiapisteen.")
         print("Olet nyt vanhan omenapuun luona.")
         print("Puusta tippuu omena ja päätät pomia sen mukaan.")
-        omppu = input("Paina A näppäintä ottaaksesi omenan mukaan tai paina Enter, jos et halua omenaa mukaan: ")
-        if omppu == "A":
-            pelaaja.lisaa_inventoryyn(self.esine)
-        elif omppu == "":
-            print("Et ottanut omenaa mukaan")
+        while True:
+            omppu = input("Paina A näppäintä ottaaksesi omenan mukaan: ")
+            if omppu == "A":
+                pelaaja.lisaa_inventoryyn(self.esine)
+                break
+            elif omppu != "A":
+                print("Virheellinen syöte. Yritä uudelleen")
+
+            
+            
 
     def joki(self, pelaaja):
 
@@ -22,13 +27,19 @@ class Huone:
         print(f"matkustaminen vie sinulta yhden energiapisteen.")
         print("Olet nyt joen rannalla.")
         print("Joesta löytyy roska ja päätät poimia sen mukaan.")
-        roska3 = input("Paina A näppäintä ottaaksesi roskan mukaan tai paina Enter, jos et halua ottaa roskaa mukaan: ")
-        if roska3 == "A":
-            pelaaja.lisaa_inventoryyn(self.esine)
-            pelaaja.karmapisteet += 2
-            print(f"Kiitos, kun välität luonnosta! Sait 2 karmapistettä.")
-        elif roska3 == "":
-            print("Et ottanut roskaa mukaan, etkä saanut karmapisteitä")
+        while True:
+            roska3 = input("Paina A näppäintä ottaaksesi roskan mukaan tai paina Enter, jos et halua ottaa roskaa mukaan: ")
+            if roska3 == "A":
+                pelaaja.lisaa_inventoryyn(self.esine)
+                pelaaja.karmapisteet += 2
+                print(f"Kiitos, kun välität luonnosta! Sait 2 karmapistettä.")
+                break
+            elif roska3 == "":
+                print("Et ottanut roskaa mukaan, etkä saanut karmapisteitä")
+                break
+            elif roska3 != "A":
+                print("Virheellinen syöte. Yritä uudelleen")
+
 
     def jarven_ranta(self, pelaaja):
 
@@ -36,13 +47,18 @@ class Huone:
         print(f"matkustaminen vie sinulta yhden energiapisteen.")
         print("Olet nyt järven rannalla.")
         print("Rannalta löytyy roska ja päätät poimia sen mukaan.")
-        roska = input("Paina A näppäintä ottaaksesi roskan mukaan tai paina Enter, jos et halua ottaa roskaa mukaan: ")
-        if roska == "A":
-            pelaaja.lisaa_inventoryyn(self.esine)
-            pelaaja.karmapisteet += 2
-            print(f"Kiitos, kun välität luonnosta! Sait 2 karmapistettä.")
-        elif roska == "":
-            print("Et ottanut roskaa mukaan, etkä saanut karmapisteitä")
+        while True:
+            roska = input("Paina A näppäintä ottaaksesi roskan mukaan tai paina Enter, jos et halua ottaa roskaa mukaan: ")
+            if roska == "A":
+                pelaaja.lisaa_inventoryyn(self.esine)
+                pelaaja.karmapisteet += 2
+                print(f"Kiitos, kun välität luonnosta! Sait 2 karmapistettä.")
+                break
+            elif roska == "":
+                print("Et ottanut roskaa mukaan, etkä saanut karmapisteitä")
+                break
+            elif roska != "A":
+                print("Virheellinen syöte. Yritä uudelleen")
 
     def pelto(self, pelaaja):
 
@@ -51,10 +67,15 @@ class Huone:
         print("Olet nyt pellolla.")
         print("Pellolta löytyy metsä mansikka ja päätät poimia sen mukaan.")
         metsa_mansikka = input("Paina A näppäintä ottaaksesi metsä mansikan mukaan tai paina Enter, jos et halua otaa metsä mansikkaa mukaan: ")
-        if metsa_mansikka == "A":
-            pelaaja.lisaa_inventoryyn(self.esine)
-        elif metsa_mansikka == "":
-            print("Et ottanut metsä mansikkaa mukaan")
+        while True:
+            if metsa_mansikka == "A":
+                pelaaja.lisaa_inventoryyn(self.esine)
+                break
+            elif metsa_mansikka == "":
+                print("Et ottanut metsä mansikkaa mukaan")
+                break
+            elif metsa_mansikka != "A":
+                print("Virheellinen syöte. Yritä uudelleen")
 
     def kallio(self, pelaaja):
 
@@ -62,13 +83,18 @@ class Huone:
         print(f"matkustaminen vie sinulta yhden energiapisteen.")
         print("Olet nyt kallion luona.")
         print("Kalliolta löytyy roska ja päätät poimia sen mukaan.")
-        roska2 = input("Paina A näppäintä ottaaksesi roskan mukaan tai paina Enter, jos et halua ottaa roskaa mukaan: ")
-        if roska2 == "A":
-            pelaaja.lisaa_inventoryyn(self.esine)
-            pelaaja.karmapisteet += 2
-            print(f"Kiitos, kun välität luonnosta! Sait 2 karmapistettä.")
-        elif roska2 == "":
-            print("Et ottanut roskaa mukaan, etkä saanut karmapisteitä")
+        while True:
+            roska2 = input("Paina A näppäintä ottaaksesi roskan mukaan tai paina Enter, jos et halua ottaa roskaa mukaan: ")
+            if roska2 == "A":
+                pelaaja.lisaa_inventoryyn(self.esine)
+                pelaaja.karmapisteet += 2
+                print(f"Kiitos, kun välität luonnosta! Sait 2 karmapistettä.")
+                break
+            elif roska2 == "":
+                print("Et ottanut roskaa mukaan, etkä saanut karmapisteitä")
+                break
+            elif roska2 != "A":
+                print("Virheellinen syöte. Yritä uudelleen")
 
     def manty(self, pelaaja):
 
@@ -76,13 +102,18 @@ class Huone:
         print(f"matkustaminen vie sinulta yhden energiapisteen.")
         print("Olet nyt mänty metsässä.")
         print("Mänty metsästä löytyy roska ja päätät poimia sen mukaan.")
-        roska4 = input("Paina A näppäintä ottaaksesi roskan mukaan tai paina Enter, jos et halua ottaa roskaa mukaan: ")
-        if roska4 == "A":
-            pelaaja.lisaa_inventoryyn(self.esine)
-            pelaaja.karmapisteet += 2
-            print(f"Kiitos, kun välität luonnosta! Sait 2 karmapistettä.")
-        elif roska4 == "":
-            print("Et ottanut roskaa mukaan, etkä saanut karmapisteitä")
+        while True:
+            roska4 = input("Paina A näppäintä ottaaksesi roskan mukaan tai paina Enter, jos et halua ottaa roskaa mukaan: ")
+            if roska4 == "A":
+                pelaaja.lisaa_inventoryyn(self.esine)
+                pelaaja.karmapisteet += 2
+                print(f"Kiitos, kun välität luonnosta! Sait 2 karmapistettä.")
+                break
+            elif roska4 == "":
+                print("Et ottanut roskaa mukaan, etkä saanut karmapisteitä")
+                break
+            elif roska4 != "A":
+                print("Virheellinen syöte. Yritä uudelleen")
 
     def luola(self, pelaaja):
 
@@ -90,11 +121,16 @@ class Huone:
         print(f"matkustaminen vie sinulta yhden energiapisteen.")
         print("Olet nyt luolan suulla.")
         print("Luolan edestä löytyy mustikka ja päätät poimia sen mukaan.")
-        mustikka = input("Paina A näppäintä ottaaksesi mustikan mukaan tai paina enter, jos et halua ottaa mustikkaa mukaan: ")
-        if mustikka == "A":
-            pelaaja.lisaa_inventoryyn(self.esine)
-        elif mustikka == "":
-            print("Et ottanut mustikkaa mukaan")
+        while True:
+            mustikka = input("Paina A näppäintä ottaaksesi mustikan mukaan tai paina enter, jos et halua ottaa mustikkaa mukaan: ")
+            if mustikka == "A":
+                pelaaja.lisaa_inventoryyn(self.esine)
+                break
+            elif mustikka == "":
+                print("Et ottanut mustikkaa mukaan")
+                break
+            elif mustikka != "A":
+                print("Virheellinen syöte. Yritä uudelleen")
 
     def kuusi(self, pelaaja):
 
@@ -102,13 +138,18 @@ class Huone:
         print(f"matkustaminen vie sinulta yhden energiapisteen.")
         print("Olet nyt kuusi metsässä.")
         print("Kuusi metsästä löytyy roska ja päätät poimia sen mukaan.")
-        roska5 = input("Paina A näppäintä ottaaksesi roskan mukaan tai paina Enter, jos et halua ottaa roskaa mukaan: ")
-        if roska5 == "A":
-            pelaaja.lisaa_inventoryyn(self.esine)
-            pelaaja.karmapisteet += 2
-            print(f"Kiitos, kun välität luonnosta! Sait 2 karmapistettä.")
-        elif roska5 == "":
-            print("Et ottanut roskaa mukaan, etkä saanut karmapisteitä")
+        while True:
+            roska5 = input("Paina A näppäintä ottaaksesi roskan mukaan tai paina Enter, jos et halua ottaa roskaa mukaan: ")
+            if roska5 == "A":
+                pelaaja.lisaa_inventoryyn(self.esine)
+                pelaaja.karmapisteet += 2
+                print(f"Kiitos, kun välität luonnosta! Sait 2 karmapistettä.")
+                break
+            elif roska5 == "":
+                print("Et ottanut roskaa mukaan, etkä saanut karmapisteitä")
+                break
+            elif roska5 != "A":
+                print("Virheellinen syöte. Yritä uudelleen")
 
     def paatos_huone(self, pelaaja):
         print("Olet seikkaillut jo pitkään ja tapaat mystisen hahmon kuusi metsän laidalla")

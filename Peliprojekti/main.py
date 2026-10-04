@@ -1,6 +1,6 @@
 from moduulit import Huone, Player, Esine, Funktiot
 
-energiapisteet = 10
+max_energiapisteet = 10
 tavarat = []
 
 omena = Esine("Omena", 5, True)
@@ -36,15 +36,19 @@ luola.eteen = kuusi
 kuusi.eteen = paatos_huone
 
 with open("Peliprojekti/Intro_ja_ohjeet.txt", "r") as tiedosto:
-    ohjeet = tiedosto.read()
+    ohjeet = tiedosto.readlines()
     print(ohjeet)
 
 print("Tervetuloa pelaamaan Metsä seikkailua!")
+try:
+    p_nimi = input("Mikä on nimesi?: ")
+    ika = int(input("Kuinka vanha olet?: "))
+except:
+    ValueError
+    print("Et antanut numero arvoa. Yritä uudellen")
+    ika = int(input("Kuinka vanha olet?: "))
 
-p_nimi = input("Mikä on nimesi?: ")
-ika = int(input("Kuinka vanha olet?: "))
-
-pelaaja = Player(p_nimi, tavarat, 10, 0, omenapuu)
+pelaaja = Player(p_nimi, tavarat, 5, 0, omenapuu)
 
 kaynnissa = True
 

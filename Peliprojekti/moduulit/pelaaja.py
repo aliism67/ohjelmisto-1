@@ -7,6 +7,7 @@ class Player:
         self.energiapisteet = energiapisteet
         self.karmapisteet = karmapisteet
         self.sijainti = sijainti
+        self.max_energiapisteet = 10
 
     def nayta_inventory(self):
         if len(self.tavarat) == 0:
@@ -31,27 +32,30 @@ class Player:
         print(f"Sinulla on: {self.karmapisteet} karmapistettä")
 
     def liiku(self):
-        if self.sijainti.eteen is not None:
-            self.sijainti = self.sijainti.eteen
+        if self.energiapisteet < 1:
+            print("Sinulla ei ole tarpeeksi energiaa, syö jotain saadaksesi lisää energiaa!")
+            return
 
-            if self.sijainti.nimi == "Vanha puu":   
-                self.sijainti.omenapuu(self)
-            elif self.sijainti.nimi == "Joki":
-                self.sijainti.joki(self)
-            elif self.sijainti.nimi == "Järven ranta":
-                self.sijainti.jarven_ranta(self)
-            elif self.sijainti.nimi == "Pelto":
-                self.sijainti.pelto(self)
-            elif self.sijainti.nimi == "Kallio":
-                self.sijainti.kallio(self)
-            elif self.sijainti.nimi == "Mänty metsä":
-                self.sijainti.manty(self)
-            elif self.sijainti.nimi == "Luola":
-                self.sijainti.luola(self)
-            elif self.sijainti.nimi == "Kuusi metsä":
-                self.sijainti.kuusi(self)
-            elif self.sijainti.nimi == "Kuusi metsän laita":
-                return self.sijainti.paatos_huone(self)
+        self.sijainti = self.sijainti.eteen
+
+        if self.sijainti.nimi == "Vanha puu":   
+            self.sijainti.omenapuu(self)
+        elif self.sijainti.nimi == "Joki":
+            self.sijainti.joki(self)
+        elif self.sijainti.nimi == "Järven ranta":
+            self.sijainti.jarven_ranta(self)
+        elif self.sijainti.nimi == "Pelto":
+            self.sijainti.pelto(self)
+        elif self.sijainti.nimi == "Kallio":
+            self.sijainti.kallio(self)
+        elif self.sijainti.nimi == "Mänty metsä":
+            self.sijainti.manty(self)
+        elif self.sijainti.nimi == "Luola":
+            self.sijainti.luola(self)
+        elif self.sijainti.nimi == "Kuusi metsä":
+            self.sijainti.kuusi(self)
+        elif self.sijainti.nimi == "Kuusi metsän laita":
+            return self.sijainti.paatos_huone(self)
 
     def syo(self):
         if len(self.tavarat) == 0:
@@ -71,6 +75,8 @@ class Player:
                 esine = self.tavarat[valitse - 1]
                 if esine.syotava:
                     print(f"Söit esineen {esine.nimi}.")
+                    if self.energiapisteet > self.max_energiapisteet:
+                        self.energiapisteet = self.max_energiapisteet
 
                     self.energiapisteet += 5
                     self.tavarat.remove(esine)
