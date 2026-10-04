@@ -1,10 +1,8 @@
-**Pelin nimi**
+**Metsä Seikkailu**
 **Aliisa Majuri**
 
-Metsä seikkailu
-
-Kuljemme metsässä joko vasemmalle, oikealle tai suoraan. pelissä hyödynnetään luonnon antimia ruoaksi, jotta nälkä ei laske liian alas. Löydämme matkalla oravan joka on jäänyt jumiin lankaan. Meidän täytyy etsiä sakset, jotta voimme vapauttaa oravan.
-
-lisää jonkunlainen karma juttu
-
-self.sijainti = huone
+Kuljemme metsässä etukäteen suunniteltua reittiä, suoraan eteenpäin. Moduulit löytyvät moduulit nimisestä paketista. Moduuleja ovat esineet, funktiot, huoneet ja pelaaja.
+Esineet moduuli sisältää vain Esine luokan.
+Funktiot moduuli sisältää aloitus valikon ja päävalikon.
+Huoneet moduuli sisältää kaikki pelissä olevat huoneet ja huoneiden sisällön
+Pelaaja moduulissa on kaikki päävalikon metodit.
