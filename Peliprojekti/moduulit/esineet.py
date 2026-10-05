@@ -3,3 +3,4 @@ class Esine:
         self.nimi = nimi
         self.esine_energia = esine_energia
         self.syotava = syotava
+        

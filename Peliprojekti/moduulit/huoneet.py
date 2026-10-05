@@ -7,6 +7,7 @@ class Huone:
     def omenapuu(self, pelaaja):
 
         pelaaja.energiapisteet -= 1
+        print("----------------------------------------------------")
         print(f"matkustaminen vie sinulta yhden energiapisteen.")
         print("Olet nyt vanhan omenapuun luona.")
         print("Puusta tippuu omena ja päätät pomia sen mukaan.")
@@ -18,12 +19,11 @@ class Huone:
             elif omppu != "A":
                 print("Virheellinen syöte. Yritä uudelleen")
 
-            
-            
 
     def joki(self, pelaaja):
 
         pelaaja.energiapisteet -= 1
+        print("----------------------------------------------------")
         print(f"matkustaminen vie sinulta yhden energiapisteen.")
         print("Olet nyt joen rannalla.")
         print("Joesta löytyy roska ja päätät poimia sen mukaan.")
@@ -44,6 +44,7 @@ class Huone:
     def jarven_ranta(self, pelaaja):
 
         pelaaja.energiapisteet -= 1
+        print("----------------------------------------------------")
         print(f"matkustaminen vie sinulta yhden energiapisteen.")
         print("Olet nyt järven rannalla.")
         print("Rannalta löytyy roska ja päätät poimia sen mukaan.")
@@ -63,6 +64,7 @@ class Huone:
     def pelto(self, pelaaja):
 
         pelaaja.energiapisteet -= 1
+        print("----------------------------------------------------")
         print(f"matkustaminen vie sinulta yhden energiapisteen.")
         print("Olet nyt pellolla.")
         print("Pellolta löytyy metsä mansikka ja päätät poimia sen mukaan.")
@@ -80,6 +82,7 @@ class Huone:
     def kallio(self, pelaaja):
 
         pelaaja.energiapisteet -= 1
+        print("----------------------------------------------------")
         print(f"matkustaminen vie sinulta yhden energiapisteen.")
         print("Olet nyt kallion luona.")
         print("Kalliolta löytyy roska ja päätät poimia sen mukaan.")
@@ -99,6 +102,7 @@ class Huone:
     def manty(self, pelaaja):
 
         pelaaja.energiapisteet -= 1
+        print("----------------------------------------------------")
         print(f"matkustaminen vie sinulta yhden energiapisteen.")
         print("Olet nyt mänty metsässä.")
         print("Mänty metsästä löytyy roska ja päätät poimia sen mukaan.")
@@ -118,6 +122,7 @@ class Huone:
     def luola(self, pelaaja):
 
         pelaaja.energiapisteet -= 1
+        print("----------------------------------------------------")
         print(f"matkustaminen vie sinulta yhden energiapisteen.")
         print("Olet nyt luolan suulla.")
         print("Luolan edestä löytyy mustikka ja päätät poimia sen mukaan.")
@@ -135,6 +140,7 @@ class Huone:
     def kuusi(self, pelaaja):
 
         pelaaja.energiapisteet -= 1
+        print("----------------------------------------------------")
         print(f"matkustaminen vie sinulta yhden energiapisteen.")
         print("Olet nyt kuusi metsässä.")
         print("Kuusi metsästä löytyy roska ja päätät poimia sen mukaan.")
@@ -152,6 +158,7 @@ class Huone:
                 print("Virheellinen syöte. Yritä uudelleen")
 
     def paatos_huone(self, pelaaja):
+        print("----------------------------------------------------")
         print("Olet seikkaillut jo pitkään ja tapaat mystisen hahmon kuusi metsän laidalla")
         print("Hahmo kertoo olevansa metsänhenki")
         if pelaaja.karmapisteet < 2:

@@ -50,17 +50,11 @@ except:
 
 pelaaja = Player(p_nimi, tavarat, 5, 0, omenapuu)
 
-kaynnissa = True
+if ika < 12:
+    print(f"Olet liian nuori, peli sulkeutuu.")
 
-while kaynnissa:
-    if ika < 12:
-        print(f"Olet liian nuori, peli sulkeutuu.")
-        break
-
-    else:
-        print(f"Hei {pelaaja.nimi}, olet {ika} vuotias!")
-        Funktiot.aloitus(pelaaja, omenapuu, huoneet, esineet)
-        kaynnissa = False 
-Funktiot.tulosta_valikko(pelaaja, huoneet, esineet)
+else:
+    print(f"Hei {pelaaja.nimi}, olet {ika} vuotias!")
+    Funktiot.aloitus(pelaaja, omenapuu, huoneet, esineet)
 
 print("Lopetetaan peli")

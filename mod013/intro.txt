@@ -1,0 +1,4 @@
+tämä ohjelma esittelee tiedostoon tallentamista
+ja sit tällasta
+myös tämä
+vikaks

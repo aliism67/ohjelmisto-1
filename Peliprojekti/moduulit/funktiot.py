@@ -59,6 +59,7 @@ class Funktiot:
 
             if valinta == "1":
                 huone.omenapuu(pelaaja)
+                Funktiot.tulosta_valikko(pelaaja, esineet, huoneet)
                 break
 
             elif valinta == "2":
@@ -72,13 +73,14 @@ class Funktiot:
 
             elif valinta == "5":
                 pelaaja.lataa_peli(huoneet, esineet)
-                break
+
+                Funktiot.tulosta_valikko(pelaaja, esineet, huoneet)
 
             elif valinta == "6":
                 pelaaja.tallenna_peli()
 
             elif valinta == "7":
-                print("Lopetetaan peli")
+                print("Kiitos pelaamisesta!")
                 break
 
             else:
