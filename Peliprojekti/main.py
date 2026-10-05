@@ -56,5 +56,6 @@ if ika < 12:
 else:
     print(f"Hei {pelaaja.nimi}, olet {ika} vuotias!")
     Funktiot.aloitus(pelaaja, omenapuu, huoneet, esineet)
+    Funktiot.tulosta_valikko(pelaaja, huoneet, esineet)
 
 print("Lopetetaan peli")

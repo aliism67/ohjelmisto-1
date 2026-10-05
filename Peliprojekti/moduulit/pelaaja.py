@@ -110,14 +110,19 @@ class Player:
             print(pelaaja_tiedot)
             self.nimi = pelaaja_tiedot["nimi"]
             self.tavarat = pelaaja_tiedot["tavarat"]
-            self.sijainti.nimi = pelaaja_tiedot["sijainti"]
             self.energiapisteet = pelaaja_tiedot["energiapisteet"]
             self.karmapisteet = pelaaja_tiedot["karmapisteet"]
 
             for huone in huoneet:
+                print("tarkistetaan huone:", huone.nimi)
+
                 if huone.nimi == pelaaja_tiedot["sijainti"]:
                     self.sijainti = huone
                     break
+            print("LADATTU SIJAINTI:", self.sijainti.nimi)
+            print("SEURAAVA HUONE:", self.sijainti.eteen.nimi)
+
+            self.tavarat = []
             for tallennettu_esine in pelaaja_tiedot["tavarat"]:
                 for esine in esineet:
                     if esine.nimi == tallennettu_esine:

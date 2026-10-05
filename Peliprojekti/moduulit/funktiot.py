@@ -1,6 +1,6 @@
 class Funktiot:
     @staticmethod  #Luokka ei tarvitse self-parametriä tai mitään muitakaan tietoja
-    def tulosta_valikko(pelaaja, esineet, huoneet):
+    def tulosta_valikko(pelaaja, huoneet, esineet):
 
         while True:
 
@@ -33,11 +33,10 @@ class Funktiot:
             elif paa_valikko == "6":
                 pelaaja.tallenna_peli()
             elif paa_valikko == "7":
-                pelaaja.lataa_peli(esineet, huoneet)
+                pelaaja.lataa_peli(huoneet, esineet)
             elif paa_valikko == "8":
                 print("Peli lopetetaan.")
                 break
-
 
 
 
@@ -59,7 +58,6 @@ class Funktiot:
 
             if valinta == "1":
                 huone.omenapuu(pelaaja)
-                Funktiot.tulosta_valikko(pelaaja, esineet, huoneet)
                 break
 
             elif valinta == "2":
@@ -73,8 +71,7 @@ class Funktiot:
 
             elif valinta == "5":
                 pelaaja.lataa_peli(huoneet, esineet)
-
-                Funktiot.tulosta_valikko(pelaaja, esineet, huoneet)
+                break
 
             elif valinta == "6":
                 pelaaja.tallenna_peli()
